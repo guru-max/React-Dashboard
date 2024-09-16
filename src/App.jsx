@@ -16,11 +16,20 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-
 import logo from "../src/assets/logo.png";
 import leftarrow from "../src/assets/left_arrow.png";
 import { indigo } from "@mui/material/colors";
-
+import speedometer from "../src/assets/speedometer.png";
+import graph from "../src/assets/graph.png";
+import timer from "../src/assets/timer_white.png";
+import icon from "../src/assets/icons8-today-96.png";
+import bill from "../src/assets/bill.png";
+import folder from "../src/assets/folder.png";
+import help from "../src/assets/help.png";
+import download from "../src/assets/download.png";
+import sidebar from "../src/assets/sidebar_overlay.png";
+import noti from "../src/assets/notification.png";
+import set from "../src/assets/settings.png";
 const drawerWidth = 240;
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
@@ -98,25 +107,13 @@ function App() {
                 <ListItemButton>
                   <ListItemIcon>
                     {text === "Dashboard" && (
-                      <img
-                        height={20}
-                        width={25}
-                        src="../src/assets/speedometer.png"
-                      />
+                      <img height={20} width={25} src={speedometer} />
                     )}
                     {text === "Activity" && (
-                      <img
-                        height={23}
-                        width={23}
-                        src="../src/assets/graph.png"
-                      />
+                      <img height={23} width={23} src={graph} />
                     )}
                     {text === "TimeSheet" && (
-                      <img
-                        height={23}
-                        width={23}
-                        src="../src/assets/timer_white.png"
-                      />
+                      <img height={23} width={23} src={timer} />
                     )}
                   </ListItemIcon>
                   <ListItemText primary={text} />
@@ -131,25 +128,13 @@ function App() {
                 <ListItemButton>
                   <ListItemIcon>
                     {text === "To-Do" && (
-                      <img
-                        height={27}
-                        width={25}
-                        src="../src/assets/icons8-today-96.png"
-                      />
+                      <img height={27} width={25} src={icon} />
                     )}
                     {text === "Invoices" && (
-                      <img
-                        height={27}
-                        width={25}
-                        src="../src/assets/bill.png"
-                      />
+                      <img height={27} width={25} src={bill} />
                     )}
                     {text === "Projects" && (
-                      <img
-                        height={20}
-                        width={25}
-                        src="../src/assets/folder.png"
-                      />
+                      <img height={20} width={25} src={folder} />
                     )}
                   </ListItemIcon>
                   <ListItemText primary={text} />
@@ -164,17 +149,9 @@ function App() {
                 <ListItemButton>
                   <ListItemIcon>
                     {index % 2 === 0 ? (
-                      <img
-                        height={23}
-                        width={23}
-                        src="../src/assets/help.png"
-                      />
+                      <img height={23} width={23} src={help} />
                     ) : (
-                      <img
-                        height={23}
-                        width={23}
-                        src="../src/assets/download.png"
-                      />
+                      <img height={23} width={23} src={download} />
                     )}
                   </ListItemIcon>
                   <ListItemText primary={text} />
@@ -182,23 +159,13 @@ function App() {
               </ListItem>
             ))}
           </List>
-          <img
-            height={250}
-            width={45}
-            src="../src/assets/sidebar_overlay.png"
-          />
+          <img height={250} width={45} src={sidebar} />
           <ListItemIcon
             sx={{ padding: "10px", justifyContent: "space-between" }}
           >
-            {
-              <img
-                height={25}
-                width={25}
-                src="../src/assets/notification.png"
-              />
-            }
-            {<img height={25} width={25} src="../src/assets/settings.png" />}
-            {<img height={25} width={25} src="../src/assets/settings.png" />}
+            {<img height={25} width={25} src={noti} />}
+            {<img height={25} width={25} src={set} />}
+            {<img height={25} width={25} src={set} />}
           </ListItemIcon>
         </Drawer>
 
@@ -219,7 +186,7 @@ function App() {
                 open && { display: "none" },
               ]}
             >
-              <img src="../src/assets/logo.png" />
+              <img src={logo} />
             </IconButton>
             <Header />
           </Grid>
