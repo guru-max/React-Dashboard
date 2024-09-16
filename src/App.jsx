@@ -16,8 +16,9 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Image from "mui-image";
+
 import logo from "../src/assets/logo.png";
+import leftarrow from "../src/assets/left_arrow.png";
 import { indigo } from "@mui/material/colors";
 
 const drawerWidth = 240;
@@ -84,9 +85,9 @@ function App() {
             <img src={logo} />
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === "rtr" ? (
-                <Image src="../src/assets/left_arrow.png" />
+                <img src={leftarrow} />
               ) : (
-                <Image src="../src/assets/left_arrow.png" />
+                <img src={leftarrow} />
               )}
             </IconButton>
           </DrawerHeader>
@@ -97,21 +98,21 @@ function App() {
                 <ListItemButton>
                   <ListItemIcon>
                     {text === "Dashboard" && (
-                      <Image
+                      <img
                         height={20}
                         width={25}
                         src="../src/assets/speedometer.png"
                       />
                     )}
                     {text === "Activity" && (
-                      <Image
+                      <img
                         height={23}
                         width={23}
                         src="../src/assets/graph.png"
                       />
                     )}
                     {text === "TimeSheet" && (
-                      <Image
+                      <img
                         height={23}
                         width={23}
                         src="../src/assets/timer_white.png"
@@ -130,21 +131,21 @@ function App() {
                 <ListItemButton>
                   <ListItemIcon>
                     {text === "To-Do" && (
-                      <Image
+                      <img
                         height={27}
                         width={25}
                         src="../src/assets/icons8-today-96.png"
                       />
                     )}
                     {text === "Invoices" && (
-                      <Image
+                      <img
                         height={27}
                         width={25}
                         src="../src/assets/bill.png"
                       />
                     )}
                     {text === "Projects" && (
-                      <Image
+                      <img
                         height={20}
                         width={25}
                         src="../src/assets/folder.png"
@@ -163,13 +164,13 @@ function App() {
                 <ListItemButton>
                   <ListItemIcon>
                     {index % 2 === 0 ? (
-                      <Image
+                      <img
                         height={23}
                         width={23}
                         src="../src/assets/help.png"
                       />
                     ) : (
-                      <Image
+                      <img
                         height={23}
                         width={23}
                         src="../src/assets/download.png"
@@ -181,7 +182,7 @@ function App() {
               </ListItem>
             ))}
           </List>
-          <Image
+          <img
             height={250}
             width={45}
             src="../src/assets/sidebar_overlay.png"
@@ -190,14 +191,14 @@ function App() {
             sx={{ padding: "10px", justifyContent: "space-between" }}
           >
             {
-              <Image
+              <img
                 height={25}
                 width={25}
                 src="../src/assets/notification.png"
               />
             }
-            {<Image height={25} width={25} src="../src/assets/settings.png" />}
-            {<Image height={25} width={25} src="../src/assets/settings.png" />}
+            {<img height={25} width={25} src="../src/assets/settings.png" />}
+            {<img height={25} width={25} src="../src/assets/settings.png" />}
           </ListItemIcon>
         </Drawer>
 
@@ -218,7 +219,7 @@ function App() {
                 open && { display: "none" },
               ]}
             >
-              <Image src="../src/assets/logo.png" />
+              <img src="../src/assets/logo.png" />
             </IconButton>
             <Header />
           </Grid>
