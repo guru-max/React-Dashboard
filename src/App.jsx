@@ -17,6 +17,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Image from "mui-image";
+import logo from "../src/assets/logo.png";
 import { indigo } from "@mui/material/colors";
 
 const drawerWidth = 240;
@@ -80,12 +81,7 @@ function App() {
           open={open}
         >
           <DrawerHeader>
-            <Image
-              height={30}
-              width={30}
-              padding={4}
-              src="../src/assets/logo.png"
-            />
+            <img src={logo} />
             <IconButton onClick={handleDrawerClose}>
               {theme.direction === "rtr" ? (
                 <Image src="../src/assets/left_arrow.png" />
